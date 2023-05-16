@@ -1,0 +1,139 @@
+---
+pagetitle: Welcome!
+output: 
+  revealjs::revealjs_presentation:
+    theme: white
+    progress: true
+    transition: convex
+    self_contained: false
+    reveal_plugins: ['notes']
+    css: ../../libs/css/custom_css.css
+    lib_dir: ../../libs
+    allow_uptree_lib_dir: True
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+
+f <- function (x) {formatC(x, format="d", big.mark=',')}
+bold <- function(x) {paste('{\\textbf{',x,'}}', sep ='')}
+gray <- function(x) {paste('{\\textcolor{gray}{',x,'}}', sep ='')}
+wrapify <- function (x) {paste("{", x, "}", sep="")}
+p <- function (x) {formatC(x, format='f', digits=1, big.mark=',')}
+```
+
+# Welcome to COM 682!
+
+## Introductions
+
+## Dad Joke
+
+- Why did the nearsighted man fall in the well?
+
+> - He couldn't see that well!
+
+# The Class
+
+## I have a few main goals for the class
+
+> 1. Provide a helpful, constructive, motivating space for you to work on learning and applying computational methods.
+> 2. Create a set of curated resources to share with each other and the world.
+> 3. Teach some best practices for doing computational work.
+> 3. Think about new ways to apply computational methods to social science problems.
+
+
+# How we get there
+
+## Structure
+
+> - First weekly meetings
+>   - Reproducible workflows + computational text analysis
+> - Later weekly meetings
+>   - 2 topic presentations
+>   - 2 work-in-progress presentations
+
+## Tools
+
+> - Wiki
+> - Element
+> - Brightspace
+
+## Wiki
+
+> - Schedule
+> - Links to readings
+> - Curated list of resources
+>   - Possibly better to put this on Github? Maybe after the class?
+
+## Element / Matrix
+
+> - Communciation
+>   - Class sessions
+>   - Announcements
+>   - Coordination
+>   - Discussion
+>   - Help
+> - Download the apps!
+
+## Brightspace
+
+> - Turning in assignments
+
+## Assignments
+
+> - Topic Exploration
+> - Final Project
+
+## Topic Exploration
+
+> - Curate a set of resources explaining the topic
+> - Ideally:
+>   - Academic paper
+>   - Explainer video / tutorial
+>   - Useful Python librar(y|ies)
+>   - Additional resources
+> - Post on the wiki (see my examples)
+
+## Presentations
+
+> - Topic presentations (~10 mins)
+>   - Walk us through what you found, tell us how to navigate resources
+> - WIP presentation
+>   - Present on where you're at with your project
+>   - Provide a document by Friday before presenting
+>     - Tell us where to focus, what feedback would be helpful 
+
+## Final Project - Paper option
+
+> - Advance a project you are working on using what you learn in this class
+> - Default option
+>	- Jupyter notebook
+>	- Short intro + Methods + Result section of paper
+> - Do what is best for your future goals
+
+## Final Project - Explainer option
+
+> - Take your topic exploration and make it amazing.
+> - Create resources to help others understand the topic and/or how to apply the method
+>   - TikTok videos
+>   - Blog posts
+>   - Jupyter notebooks
+>   - Etc.
+
+## Grades
+
+> - Goal is learning
+> - Two self-assessment reflections
+
+
+## Conversation
+
+> - What should we change to help you meet your goals?
+> - What computational text analysis topics are missing?
+
+## TODOs
+
+> - Learn how to edit the wiki
+> - Sign up for a topic (including text analysis)
+> - Sign up for two presentation days - one topic, one WIP

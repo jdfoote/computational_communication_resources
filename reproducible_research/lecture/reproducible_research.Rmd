@@ -1,0 +1,37 @@
+---
+pagetitle: Reproducible Research
+output: 
+  revealjs::revealjs_presentation:
+    theme: white
+    progress: true
+    transition: convex
+    self_contained: false
+    reveal_plugins: ['notes']
+    css: ../../libs/css/custom_css.css
+    lib_dir: ../../libs
+    allow_uptree_lib_dir: True
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = './')
+
+f <- function (x) {formatC(x, format="d", big.mark=',')}
+bold <- function(x) {paste('{\\textbf{',x,'}}', sep ='')}
+gray <- function(x) {paste('{\\textcolor{gray}{',x,'}}', sep ='')}
+wrapify <- function (x) {paste("{", x, "}", sep="")}
+p <- function (x) {formatC(x, format='f', digits=1, big.mark=',')}
+```
+
+
+## What is reproducibility?
+
+> - Replicability and reducibility are overlapping (sometimes with contrary definitions)
+> - Key ideas:
+>   - Reproduce the analyses of a specific study
+>   - Reproduce the results via an independent study (with new data)
+
+Our goal is the first version
+
+
+## There are huge benefits for 

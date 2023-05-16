@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Welcome!</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../libs/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="../../libs/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="../../libs/css/custom_css.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="../../libs/header-attrs-2.19.2/header-attrs.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="welcome-to-com-682" class="title-slide slide level1">
+<h1>Welcome to COM 682!</h1>
+
+</section>
+<section id="introductions" class="slide level2">
+<h2>Introductions</h2>
+</section>
+<section id="dad-joke" class="slide level2">
+<h2>Dad Joke</h2>
+<ul>
+<li>Why did the nearsighted man fall in the well?</li>
+</ul>
+<ul>
+<li class="fragment">He couldn’t see that well!</li>
+</ul>
+</section></section>
+<section>
+<section id="the-class" class="title-slide slide level1">
+<h1>The Class</h1>
+
+</section>
+<section id="i-have-a-few-main-goals-for-the-class" class="slide level2">
+<h2>I have a few main goals for the class</h2>
+<ol type="1">
+<li class="fragment">Provide a helpful, constructive, motivating space for you to work on learning and applying computational methods.</li>
+<li class="fragment">Create a set of curated resources to share with each other and the world.</li>
+<li class="fragment">Teach some best practices for doing computational work.</li>
+<li class="fragment">Think about new ways to apply computational methods to social science problems.</li>
+</ol>
+</section></section>
+<section>
+<section id="how-we-get-there" class="title-slide slide level1">
+<h1>How we get there</h1>
+
+</section>
+<section id="structure" class="slide level2">
+<h2>Structure</h2>
+<ul>
+<li class="fragment">First weekly meetings
+<ul>
+<li class="fragment">Reproducible workflows + computational text analysis</li>
+</ul></li>
+<li class="fragment">Later weekly meetings
+<ul>
+<li class="fragment">2 topic presentations</li>
+<li class="fragment">2 work-in-progress presentations</li>
+</ul></li>
+</ul>
+</section>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
+<ul>
+<li class="fragment">Wiki</li>
+<li class="fragment">Element</li>
+<li class="fragment">Brightspace</li>
+</ul>
+</section>
+<section id="wiki" class="slide level2">
+<h2>Wiki</h2>
+<ul>
+<li class="fragment">Schedule</li>
+<li class="fragment">Links to readings</li>
+<li class="fragment">Curated list of resources
+<ul>
+<li class="fragment">Possibly better to put this on Github? Maybe after the class?</li>
+</ul></li>
+</ul>
+</section>
+<section id="element-matrix" class="slide level2">
+<h2>Element / Matrix</h2>
+<ul>
+<li class="fragment">Communciation
+<ul>
+<li class="fragment">Class sessions</li>
+<li class="fragment">Announcements</li>
+<li class="fragment">Coordination</li>
+<li class="fragment">Discussion</li>
+<li class="fragment">Help</li>
+</ul></li>
+<li class="fragment">Download the apps!</li>
+</ul>
+</section>
+<section id="brightspace" class="slide level2">
+<h2>Brightspace</h2>
+<ul>
+<li class="fragment">Turning in assignments</li>
+</ul>
+</section>
+<section id="assignments" class="slide level2">
+<h2>Assignments</h2>
+<ul>
+<li class="fragment">Topic Exploration</li>
+<li class="fragment">Final Project</li>
+</ul>
+</section>
+<section id="topic-exploration" class="slide level2">
+<h2>Topic Exploration</h2>
+<ul>
+<li class="fragment">Curate a set of resources explaining the topic</li>
+<li class="fragment">Ideally:
+<ul>
+<li class="fragment">Academic paper</li>
+<li class="fragment">Explainer video / tutorial</li>
+<li class="fragment">Useful Python librar(y|ies)</li>
+<li class="fragment">Additional resources</li>
+</ul></li>
+<li class="fragment">Post on the wiki (see my examples)</li>
+</ul>
+</section>
+<section id="presentations" class="slide level2">
+<h2>Presentations</h2>
+<ul>
+<li class="fragment">Topic presentations (~10 mins)
+<ul>
+<li class="fragment">Walk us through what you found, tell us how to navigate resources</li>
+</ul></li>
+<li class="fragment">WIP presentation
+<ul>
+<li class="fragment">Present on where you’re at with your project</li>
+<li class="fragment">Provide a document by Friday before presenting
+<ul>
+<li class="fragment">Tell us where to focus, what feedback would be helpful</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="final-project---paper-option" class="slide level2">
+<h2>Final Project - Paper option</h2>
+<ul>
+<li class="fragment">Advance a project you are working on using what you learn in this class</li>
+<li class="fragment">Default option
+<ul>
+<li class="fragment">Jupyter notebook</li>
+<li class="fragment">Short intro + Methods + Result section of paper</li>
+</ul></li>
+<li class="fragment">Do what is best for your future goals</li>
+</ul>
+</section>
+<section id="final-project---explainer-option" class="slide level2">
+<h2>Final Project - Explainer option</h2>
+<ul>
+<li class="fragment">Take your topic exploration and make it amazing.</li>
+<li class="fragment">Create resources to help others understand the topic and/or how to apply the method
+<ul>
+<li class="fragment">TikTok videos</li>
+<li class="fragment">Blog posts</li>
+<li class="fragment">Jupyter notebooks</li>
+<li class="fragment">Etc.</li>
+</ul></li>
+</ul>
+</section>
+<section id="grades" class="slide level2">
+<h2>Grades</h2>
+<ul>
+<li class="fragment">Goal is learning</li>
+<li class="fragment">Two self-assessment reflections</li>
+</ul>
+</section>
+<section id="conversation" class="slide level2">
+<h2>Conversation</h2>
+<ul>
+<li class="fragment">What should we change to help you meet your goals?</li>
+<li class="fragment">What computational text analysis topics are missing?</li>
+</ul>
+</section>
+<section id="todos" class="slide level2">
+<h2>TODOs</h2>
+<ul>
+<li class="fragment">Learn how to edit the wiki</li>
+<li class="fragment">Sign up for a topic (including text analysis)</li>
+<li class="fragment">Sign up for two presentation days - one topic, one WIP</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="../../libs/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="../../libs/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'convex', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../../libs/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
