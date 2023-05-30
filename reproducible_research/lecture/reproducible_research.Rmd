@@ -1,5 +1,5 @@
 ---
-pagetitle: Reproducible Research
+title: Reproducible Research
 output: 
   revealjs::revealjs_presentation:
     theme: white
@@ -23,15 +23,100 @@ wrapify <- function (x) {paste("{", x, "}", sep="")}
 p <- function (x) {formatC(x, format='f', digits=1, big.mark=',')}
 ```
 
+## Housekeeping
+
+> - Proposal for computational text analysis
+>   - Read Text as Data book??
+>   - Build a set of papers/tools together
 
 ## What is reproducibility?
 
-> - Replicability and reducibility are overlapping (sometimes with contrary definitions)
+> - Replicability and reproducibility are overlapping (sometimes with contrary definitions)
 > - Key ideas:
 >   - Reproduce the analyses of a specific study
 >   - Reproduce the results via an independent study (with new data)
 
-Our goal is the first version
+> - Our goal is the first version
 
 
-## There are huge benefits for 
+## Why do reproducible research?
+
+> - It makes for good science
+>   - Your choices become visible
+>   - Others can build on your work
+> - You like your future self
+>   - It makes it easier to spot and handle bugs / problems
+>   - You will come back to your projects again!
+>   - Revisions
+>   - Related projects
+
+
+## Key ideas
+
+> - Not binary - you can take steps to make things more reproducible
+> - Most practical steps
+>   - Make backups!!!
+>   - Create a well-documented process
+>     - README files
+>     - .py files or clean, self-contained Jupyter notebooks
+>     - Eliminate, automate or document _every_ manual step
+
+
+## Discussion
+
+
+# Day 2: LaTeX, knitr, and (Snake)Make
+
+## Dad Joke
+
+I got arrested today for walking out of an art museum with a painting.
+
+<span class='fragment'>
+I’m just so confused because when I asked the security if I could take a picture they said “yes”.</span>
+
+## LaTeX
+
+> - Document preparation language and software
+> - Separates content from presentation
+
+## Pros
+
+> - Ideally, can quickly change the entire vibe of a document
+> - Amazing for citations
+> - "Smart" - makes things look beautiful
+
+## Cons
+
+> - Learning curve (better with Overleaf!)
+> - It's a programming language - there can be bugs and exceptions
+> - *Co-authors have to also use it*
+
+## Markdown / R Markdown / Quarto
+
+> - Growing movement to build tools that output LaTeX using markdown that is easier to learn and work with
+> - Lots of promise here, but not quite as powerful
+
+## Knitr
+
+> - Very cool idea to put pointers to data directly in a LaTeX or Markdown document
+> - Can reference things (e.g., $\beta$, SD, $N$)
+> - Can even build figures
+> - In practice, I've found building figures earlier to work better
+
+## Workflow Management
+
+> - Eliminate, automate, or document!
+> - A number of tools for automating workflows
+> - Snakemake is fairly simple and Python-based
+
+## Snakemake
+
+> - Process for actually running all of the code needed to produce figures / papers
+> - Builds a Directed Acyclical Graph (DAG) of what needs to be done
+> - Only runs the parts where something has changed "upstream"
+> - Con is that you need to install more software
+
+## Discussion
+
+## Snakemake co-working
+
